@@ -34,3 +34,16 @@ C:\dipl\app\repliciran api i baza\DiplForms\obj\Debug\DiplForms.csproj.CoreCompi
 C:\dipl\app\repliciran api i baza\DiplForms\obj\Debug\DiplForms.csproj.CopyComplete
 C:\dipl\app\repliciran api i baza\DiplForms\obj\Debug\DiplForms.exe
 C:\dipl\app\repliciran api i baza\DiplForms\obj\Debug\DiplForms.pdb
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\bin\Debug\DiplForms.exe.config
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\bin\Debug\DiplForms.exe
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\bin\Debug\DiplForms.pdb
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\bin\Debug\log4net.dll
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\bin\Debug\log4net.xml
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.csprojAssemblyReference.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\test.Form1.resources
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.Properties.Resources.resources
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.csproj.GenerateResource.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.csproj.CoreCompileInputs.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.csproj.CopyComplete
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.exe
+C:\dipl\app\repliciran api i baza\Diplomski\DiplForms\obj\Debug\DiplForms.pdb

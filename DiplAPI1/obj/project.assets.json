@@ -11974,11 +11974,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dipl\\app\\repliciran api i baza\\DiplAPI1\\DiplAPI1.csproj",
+      "projectUniqueName": "C:\\dipl\\app\\repliciran api i baza\\Diplomski\\DiplAPI1\\DiplAPI1.csproj",
       "projectName": "DiplAPI1",
-      "projectPath": "C:\\dipl\\app\\repliciran api i baza\\DiplAPI1\\DiplAPI1.csproj",
+      "projectPath": "C:\\dipl\\app\\repliciran api i baza\\Diplomski\\DiplAPI1\\DiplAPI1.csproj",
       "packagesPath": "C:\\Users\\stefa\\.nuget\\packages\\",
-      "outputPath": "C:\\dipl\\app\\repliciran api i baza\\DiplAPI1\\obj\\",
+      "outputPath": "C:\\dipl\\app\\repliciran api i baza\\Diplomski\\DiplAPI1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

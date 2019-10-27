@@ -12,3 +12,17 @@ C:\dipl\app\repliciran api i baza\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.Razo
 C:\dipl\app\repliciran api i baza\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.dll
 C:\dipl\app\repliciran api i baza\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.pdb
 C:\dipl\app\repliciran api i baza\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.csprojAssemblyReference.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\bin\Debug\netcoreapp2.1\DiplAPI2.deps.json
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\bin\Debug\netcoreapp2.1\DiplAPI2.runtimeconfig.json
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\bin\Debug\netcoreapp2.1\DiplAPI2.runtimeconfig.dev.json
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\bin\Debug\netcoreapp2.1\DiplAPI2.dll
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\bin\Debug\netcoreapp2.1\DiplAPI2.pdb
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.csprojAssemblyReference.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.csproj.CoreCompileInputs.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.RazorAssemblyInfo.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.RazorAssemblyInfo.cs
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.AssemblyInfoInputs.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.AssemblyInfo.cs
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.RazorTargetAssemblyInfo.cache
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.dll
+C:\dipl\app\repliciran api i baza\Diplomski\DiplAPI2\obj\Debug\netcoreapp2.1\DiplAPI2.pdb
