@@ -1,0 +1,17 @@
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\DiplAPI.deps.json
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\DiplAPI.runtimeconfig.json
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\DiplAPI.runtimeconfig.dev.json
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\DiplAPI.dll
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\DiplAPI.pdb
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.csprojAssemblyReference.cache
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.csproj.CoreCompileInputs.cache
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.RazorAssemblyInfo.cache
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.RazorAssemblyInfo.cs
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.AssemblyInfoInputs.cache
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.AssemblyInfo.cs
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.RazorTargetAssemblyInfo.cache
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.dll
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.pdb
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\Backend.dll
+C:\Users\stefa\source\repos\DiplAPI\bin\Debug\netcoreapp2.1\Backend.pdb
+C:\Users\stefa\source\repos\DiplAPI\obj\Debug\netcoreapp2.1\DiplAPI.csproj.CopyComplete

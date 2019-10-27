@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiplForms", "DiplForms\DiplForms.csproj", "{A226A868-6449-4FE1-A98D-05C890375425}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplAPI1", "DiplAPI1\DiplAPI1.csproj", "{11BCC00C-F124-4FB9-90D2-1FCC646D693D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiplAPI2", "DiplAPI2\DiplAPI2.csproj", "{C73EF543-5354-426D-B471-994321823BA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A226A868-6449-4FE1-A98D-05C890375425}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A226A868-6449-4FE1-A98D-05C890375425}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A226A868-6449-4FE1-A98D-05C890375425}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A226A868-6449-4FE1-A98D-05C890375425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11BCC00C-F124-4FB9-90D2-1FCC646D693D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11BCC00C-F124-4FB9-90D2-1FCC646D693D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11BCC00C-F124-4FB9-90D2-1FCC646D693D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11BCC00C-F124-4FB9-90D2-1FCC646D693D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C73EF543-5354-426D-B471-994321823BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C73EF543-5354-426D-B471-994321823BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C73EF543-5354-426D-B471-994321823BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C73EF543-5354-426D-B471-994321823BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7CEC825-13D5-48C9-8DC6-6A5151B02D6C}
+	EndGlobalSection
+EndGlobal
