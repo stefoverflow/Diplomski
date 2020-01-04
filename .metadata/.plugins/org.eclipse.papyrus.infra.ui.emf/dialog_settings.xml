@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.papyrus.infra.ui.emf.customizationManager">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Event:event">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history_container_uml:Event:event">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/diagram/diagram.uml#_N7_dUASkEeqFcsT6p02TUw"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/diagram/diagram.uml:uml:Event:event">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/diagram/diagram.uml#_J1ic8ASyEeqFcsT6p02TUw"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/diagram/diagram.uml:uml:Operation:operation">
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history_container_platform:/resource/diagram/diagram.uml:uml:Event:event">
+		<section name="History">
+			<list key="PreviousSelection">
+				<item value="platform:/resource/diagram/diagram.uml#_N7_dUASkEeqFcsT6p02TUw"/>
+			</list>
+		</section>
+	</section>
+	<section name="org.eclipse.papyrus.infra.ui.emf.providers.EMFGraphicalContentProvider_history__uml:Element:annotatedElement">
+	</section>
+</section>

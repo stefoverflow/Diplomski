@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_RGgvwAedEeq709Bl8bAGEw" name="dvojstrukabarijeraLEAVE">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_RKuhYAedEeq709Bl8bAGEw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_RHausAedEeq709Bl8bAGEw" name="Activity1" node="_R86zUAedEeq709Bl8bAGEw _tMxnIAeuEeq709Bl8bAGEw _gSqhUAfTEeq709Bl8bAGEw _NE3goAfcEeq709Bl8bAGEw _L2Yz8AffEeq709Bl8bAGEw _o8j44AffEeq709Bl8bAGEw __YvyEAffEeq709Bl8bAGEw _S1p1QAhlEeqvyIwzZoUqcA _hF9SIAhlEeqvyIwzZoUqcA _Dsb98AhmEeqvyIwzZoUqcA _4JN88AhmEeqvyIwzZoUqcA">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_npjXkAlNEeqWXoXbYwrRSg" annotatedElement="_L2Yz8AffEeq709Bl8bAGEw">
+      <body>Najniži sekvencijalni proces&#xD;
+ sekoristi kao ready flag u enter &#xD;
+algoritmu</body>
+    </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_7UQAkAlNEeqWXoXbYwrRSg" annotatedElement="_hF9SIAhlEeqvyIwzZoUqcA">
+      <body>Ukoliko je najniži proces&#xD;
+ostao poslednji  briše svoj znode &#xD;
+i svi procesi napuštaju barijeru</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sy7j8AfTEeq709Bl8bAGEw" name="TRUE" target="__YvyEAffEeq709Bl8bAGEw" source="_gSqhUAfTEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GHNyAAfcEeq709Bl8bAGEw" target="_tMxnIAeuEeq709Bl8bAGEw" source="_R86zUAedEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_HGyYoAfcEeq709Bl8bAGEw" target="_gSqhUAfTEeq709Bl8bAGEw" source="_tMxnIAeuEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c3OewAffEeq709Bl8bAGEw" name="FALSE" target="_L2Yz8AffEeq709Bl8bAGEw" source="_gSqhUAfTEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aXJ30AhlEeqvyIwzZoUqcA" name="FALSE" target="_o8j44AffEeq709Bl8bAGEw" source="_L2Yz8AffEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cbWkMAhlEeqvyIwzZoUqcA" name="TRUE" target="_hF9SIAhlEeqvyIwzZoUqcA" source="_L2Yz8AffEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sMBnoAhlEeqvyIwzZoUqcA" name="TRUE" target="_NE3goAfcEeq709Bl8bAGEw" source="_hF9SIAhlEeqvyIwzZoUqcA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_uEZegAhlEeqvyIwzZoUqcA" name="FALSE" target="_S1p1QAhlEeqvyIwzZoUqcA" source="_hF9SIAhlEeqvyIwzZoUqcA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FFie4AhmEeqvyIwzZoUqcA" target="_Dsb98AhmEeqvyIwzZoUqcA" source="_o8j44AffEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_F4Dg8AhmEeqvyIwzZoUqcA" target="_Dsb98AhmEeqvyIwzZoUqcA" source="_S1p1QAhlEeqvyIwzZoUqcA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GnUasAhmEeqvyIwzZoUqcA" target="_Dsb98AhmEeqvyIwzZoUqcA" source="_NE3goAfcEeq709Bl8bAGEw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_LD6h0AhmEeqvyIwzZoUqcA" target="_tMxnIAeuEeq709Bl8bAGEw" source="_Dsb98AhmEeqvyIwzZoUqcA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5m2YkAhmEeqvyIwzZoUqcA" target="_4JN88AhmEeqvyIwzZoUqcA" source="__YvyEAffEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_R86zUAedEeq709Bl8bAGEw" name="START" outgoing="_GHNyAAfcEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tMxnIAeuEeq709Bl8bAGEw" name="L=getChildren(b,false)" incoming="_GHNyAAfcEeq709Bl8bAGEw _LD6h0AhmEeqvyIwzZoUqcA" outgoing="_HGyYoAfcEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_gSqhUAfTEeq709Bl8bAGEw" name="if(L.Count()==0)" incoming="_HGyYoAfcEeq709Bl8bAGEw" outgoing="_sy7j8AfTEeq709Bl8bAGEw _c3OewAffEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_NE3goAfcEeq709Bl8bAGEw" name="delete(n) i izlazak iz barijere" incoming="_sMBnoAhlEeqvyIwzZoUqcA" outgoing="_GnUasAhmEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_L2Yz8AffEeq709Bl8bAGEw" name="Da li je trenutni proces najniži kreirani u barijeri" incoming="_c3OewAffEeq709Bl8bAGEw" outgoing="_aXJ30AhlEeqvyIwzZoUqcA _cbWkMAhlEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_o8j44AffEeq709Bl8bAGEw" name="Klijent briše svoj znode" incoming="_aXJ30AhlEeqvyIwzZoUqcA" outgoing="_FFie4AhmEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__YvyEAffEeq709Bl8bAGEw" name="Izlazak iz barijere" incoming="_sy7j8AfTEeq709Bl8bAGEw" outgoing="_5m2YkAhmEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_S1p1QAhlEeqvyIwzZoUqcA" name="Najniži proces čeka ostale procese" incoming="_uEZegAhlEeqvyIwzZoUqcA" outgoing="_F4Dg8AhmEeqvyIwzZoUqcA">
+      <trigger xmi:type="uml:Trigger" xmi:id="_S1p1QQhlEeqvyIwzZoUqcA" name="timevent">
+        <event xmi:type="uml:TimeEvent" href="../barijera/barijera.uml#_GqlHYASzEeqFcsT6p02TUw"/>
+      </trigger>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_hF9SIAhlEeqvyIwzZoUqcA" name="if(L.Count()==1)" incoming="_cbWkMAhlEeqvyIwzZoUqcA" outgoing="_sMBnoAhlEeqvyIwzZoUqcA _uEZegAhlEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_Dsb98AhmEeqvyIwzZoUqcA" incoming="_FFie4AhmEeqvyIwzZoUqcA _F4Dg8AhmEeqvyIwzZoUqcA _GnUasAhmEeqvyIwzZoUqcA" outgoing="_LD6h0AhmEeqvyIwzZoUqcA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_4JN88AhmEeqvyIwzZoUqcA" name="END" incoming="_5m2YkAhmEeqvyIwzZoUqcA"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_N7_dUASkEeqFcsT6p02TUw" name="diagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_OJxaoASkEeqFcsT6p02TUw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="__b2YMASkEeqFcsT6p02TUw" name="Activity2" node="_Yirn0ASnEeqFcsT6p02TUw _TPhPoASoEeqFcsT6p02TUw _hIdVYASoEeqFcsT6p02TUw _hZ640ASoEeqFcsT6p02TUw _HBJY0ASpEeqFcsT6p02TUw _FkGSYASxEeqFcsT6p02TUw _CxihkAVpEeqfps3-tAYr9w">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YWyEYASoEeqFcsT6p02TUw" target="_Yirn0ASnEeqFcsT6p02TUw" source="_TPhPoASoEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tEbYIASoEeqFcsT6p02TUw" name="[FALSE]" target="_hIdVYASoEeqFcsT6p02TUw" source="_Yirn0ASnEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_CcNOAASpEeqFcsT6p02TUw" name="[TRUE]" target="_hZ640ASoEeqFcsT6p02TUw" source="_Yirn0ASnEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c7lCAAVoEeqfps3-tAYr9w" target="_FkGSYASxEeqFcsT6p02TUw" source="_hZ640ASoEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_eAFL8AVoEeqfps3-tAYr9w" target="_TPhPoASoEeqFcsT6p02TUw" source="_FkGSYASxEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mduGoAVoEeqfps3-tAYr9w" target="_HBJY0ASpEeqFcsT6p02TUw" source="_hIdVYASoEeqFcsT6p02TUw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_KkcdMAVpEeqfps3-tAYr9w" target="_TPhPoASoEeqFcsT6p02TUw" source="_CxihkAVpEeqfps3-tAYr9w"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_Yirn0ASnEeqFcsT6p02TUw" name="" incoming="_YWyEYASoEeqFcsT6p02TUw" outgoing="_tEbYIASoEeqFcsT6p02TUw _CcNOAASpEeqFcsT6p02TUw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TPhPoASoEeqFcsT6p02TUw" name="Klijent poziva exists() na znode barijere sa watch eventnom postavljenim na true" incoming="_eAFL8AVoEeqfps3-tAYr9w _KkcdMAVpEeqfps3-tAYr9w" outgoing="_YWyEYASoEeqFcsT6p02TUw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_hIdVYASoEeqFcsT6p02TUw" name="Ukoliko exists() vrati false barijere vise nema" incoming="_tEbYIASoEeqFcsT6p02TUw" outgoing="_mduGoAVoEeqfps3-tAYr9w"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_hZ640ASoEeqFcsT6p02TUw" name="Ukoliko exists() vrati true klijent čeka na watch event" incoming="_CcNOAASpEeqFcsT6p02TUw" outgoing="_c7lCAAVoEeqfps3-tAYr9w"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_HBJY0ASpEeqFcsT6p02TUw" name="END" incoming="_mduGoAVoEeqfps3-tAYr9w"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_FkGSYASxEeqFcsT6p02TUw" name="Kada je okinut watch event, klijent obnavlja exists()" incoming="_c7lCAAVoEeqfps3-tAYr9w" outgoing="_eAFL8AVoEeqfps3-tAYr9w">
+      <trigger xmi:type="uml:Trigger" xmi:id="_KHB1kASyEeqFcsT6p02TUw" name="timevent" event="_GqlHYASzEeqFcsT6p02TUw"/>
+    </node>
+    <node xmi:type="uml:InitialNode" xmi:id="_CxihkAVpEeqfps3-tAYr9w" name="START" outgoing="_KkcdMAVpEeqfps3-tAYr9w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:CallEvent" xmi:id="_J1ic8ASyEeqFcsT6p02TUw" name="Klijent ceka na watch event od Zookeepera"/>
+  <packagedElement xmi:type="uml:TimeEvent" xmi:id="_GqlHYASzEeqFcsT6p02TUw" name="s"/>
+</uml:Model>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmi:id="_sQ7NUAbGEeqcUs5alUPwMA" type="PapyrusUMLActivityDiagram" name="Activity Diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" xmi:id="_sQ7NUQbGEeqcUs5alUPwMA" type="Activity_Shape">
+    <children xsi:type="notation:DecorationNode" xmi:id="_sQ7NUgbGEeqcUs5alUPwMA" type="Activity_NameLabel"/>
+    <children xsi:type="notation:DecorationNode" xmi:id="_sQ7NUwbGEeqcUs5alUPwMA" type="Activity_KeywordLabel"/>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_sQ7NVAbGEeqcUs5alUPwMA" type="Activity_ParameterCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_sQ7NVQbGEeqcUs5alUPwMA"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_sQ7NVgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sQ7NVwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_sQ7NWAbGEeqcUs5alUPwMA" type="Activity_PreconditionCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_sQ7NWQbGEeqcUs5alUPwMA"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_sQ7NWgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sQ7NWwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_sQ7NXAbGEeqcUs5alUPwMA" type="Activity_PostconditionCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_sQ7NXQbGEeqcUs5alUPwMA"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_sQ7NXgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sQ7NXwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_sQ7NYAbGEeqcUs5alUPwMA" type="Activity_ActivityNodeCompartment">
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sQ7NYQbGEeqcUs5alUPwMA"/>
+    </children>
+    <element href="dvojstrukabarijera.uml#_sQfIcAbGEeqcUs5alUPwMA"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_sQ7NYgbGEeqcUs5alUPwMA"/>
+  </children>
+  <styles xsi:type="notation:StringValueStyle" xmi:id="_sQ7NYwbGEeqcUs5alUPwMA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xsi:type="notation:DiagramStyle" xmi:id="_sQ7NZAbGEeqcUs5alUPwMA"/>
+  <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_sQ7NZQbGEeqcUs5alUPwMA" diagramKindId="org.eclipse.papyrus.uml.diagram.activity">
+    <owner href="dvojstrukabarijera.uml#_sFeyUAbGEeqcUs5alUPwMA"/>
+  </styles>
+  <element href="dvojstrukabarijera.uml#_sQfIcAbGEeqcUs5alUPwMA"/>
+</notation:Diagram>

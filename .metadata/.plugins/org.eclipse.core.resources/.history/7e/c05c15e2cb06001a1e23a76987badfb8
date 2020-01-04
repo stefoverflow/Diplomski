@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sFeyUAbGEeqcUs5alUPwMA" name="dvojstrukabarijera">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_sTBfEAbGEeqcUs5alUPwMA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_sQfIcAbGEeqcUs5alUPwMA" name="Activity1" node="_uwC7IAbGEeqcUs5alUPwMA _kGnhgAbKEeqcUs5alUPwMA _0qrJsAbKEeqcUs5alUPwMA _9enEgAbKEeqcUs5alUPwMA _CyG-cAbLEeqcUs5alUPwMA _X8BXcAbLEeqcUs5alUPwMA">
+    <node xmi:type="uml:InitialNode" xmi:id="_uwC7IAbGEeqcUs5alUPwMA" name="START"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_kGnhgAbKEeqcUs5alUPwMA" name="Klijent kreira znode sa putanjom n=b+&quot;/&quot;+p "/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_0qrJsAbKEeqcUs5alUPwMA" name="Postavlja watch event: exists(b+&quot;/ready&quot;,true);"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9enEgAbKEeqcUs5alUPwMA" name="Kreira dete sa privremenim flagom: create(n,EPHEMERAL)"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_CyG-cAbLEeqcUs5alUPwMA" name="Poziva: L=getChildren(b,false)"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_X8BXcAbLEeqcUs5alUPwMA">
+      <name xsi:nil="true"/>
+    </node>
+  </packagedElement>
+</uml:Model>

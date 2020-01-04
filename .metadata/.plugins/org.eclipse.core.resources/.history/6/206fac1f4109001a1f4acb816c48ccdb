@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmi:id="_miSaUQiZEeqcVO6UFbEYXg" type="PapyrusUMLActivityDiagram" name="Activity Diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" xmi:id="_miSaUgiZEeqcVO6UFbEYXg" type="Activity_Shape">
+    <children xsi:type="notation:DecorationNode" xmi:id="_miSaUwiZEeqcVO6UFbEYXg" type="Activity_NameLabel"/>
+    <children xsi:type="notation:DecorationNode" xmi:id="_miSaVAiZEeqcVO6UFbEYXg" type="Activity_KeywordLabel"/>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_miSaVQiZEeqcVO6UFbEYXg" type="Activity_ParameterCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_miSaVgiZEeqcVO6UFbEYXg"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_miSaVwiZEeqcVO6UFbEYXg"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_miSaWAiZEeqcVO6UFbEYXg"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_miSaWQiZEeqcVO6UFbEYXg" type="Activity_PreconditionCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_miSaWgiZEeqcVO6UFbEYXg"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_miSaWwiZEeqcVO6UFbEYXg"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_miSaXAiZEeqcVO6UFbEYXg"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_miSaXQiZEeqcVO6UFbEYXg" type="Activity_PostconditionCompartment">
+      <styles xsi:type="notation:SortingStyle" xmi:id="_miSaXgiZEeqcVO6UFbEYXg"/>
+      <styles xsi:type="notation:FilteringStyle" xmi:id="_miSaXwiZEeqcVO6UFbEYXg"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_miSaYAiZEeqcVO6UFbEYXg"/>
+    </children>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_miSaYQiZEeqcVO6UFbEYXg" type="Activity_ActivityNodeCompartment">
+      <children xsi:type="notation:Shape" xmi:id="_Z5V4YAk_EeqWXoXbYwrRSg" type="InitialNode_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_Z5YUoAk_EeqWXoXbYwrRSg" type="InitialNode_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_Z5YUoQk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <children xsi:type="notation:DecorationNode" xmi:id="_Z5YUogk_EeqWXoXbYwrRSg" type="InitialNode_StereotypeLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_Z5Y7sAk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_Z0yvkAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_Z5V4YQk_EeqWXoXbYwrRSg" x="351" y="8"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_bB1xgAk_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_bB2_oAk_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_bB2_oQk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_bB2_ogk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_bBi2kAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_bB7REAk_EeqWXoXbYwrRSg" x="275" y="68"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_c9SxkAk_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_c9TYoAk_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_c9T_sAk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_c9T_sQk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_c9BEwAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_c9T_sgk_EeqWXoXbYwrRSg" x="235" y="188"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_kunY0Ak_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_kun_4Ak_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_kun_4Qk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_kun_4gk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_kuakgAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_kuom8Ak_EeqWXoXbYwrRSg" x="291" y="128"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_pv1P8Ak_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_pv1P8gk_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_pv1P8wk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_pv1P9Ak_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_pvnNgAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_pv13AAk_EeqWXoXbYwrRSg" x="255" y="248"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_173vAAk_EeqWXoXbYwrRSg" type="DecisionNode_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_173vAgk_EeqWXoXbYwrRSg" type="DecisionNode_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_174WEAk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <children xsi:type="notation:DecorationNode" xmi:id="_174WEQk_EeqWXoXbYwrRSg" type="DecisionNode_DecisionInputLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_174WEgk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <children xsi:type="notation:DecorationNode" xmi:id="_174WEwk_EeqWXoXbYwrRSg" type="DecisionNode_StereotypeLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_174WFAk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_17mCMAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_173vAQk_EeqWXoXbYwrRSg" x="351" y="304"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_353swAk_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_354T0Ak_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_354T0Qk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_354T0gk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_35sGkAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_354T0wk_EeqWXoXbYwrRSg" x="591" y="328"/>
+      </children>
+      <children xsi:type="notation:Shape" xmi:id="_48b9AAk_EeqWXoXbYwrRSg" type="OpaqueAction_Shape">
+        <children xsi:type="notation:DecorationNode" xmi:id="_48b9Agk_EeqWXoXbYwrRSg" type="OpaqueAction_NameLabel"/>
+        <children xsi:type="notation:DecorationNode" xmi:id="_48ckEAk_EeqWXoXbYwrRSg" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xsi:type="notation:Location" xmi:id="_48ckEQk_EeqWXoXbYwrRSg" y="15"/>
+        </children>
+        <element href="leaderelection1.uml#_48K3QAk_EeqWXoXbYwrRSg"/>
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_48ckEgk_EeqWXoXbYwrRSg" x="315" y="388"/>
+      </children>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_miSaYgiZEeqcVO6UFbEYXg"/>
+    </children>
+    <element href="leaderelection1.uml#_miSaUAiZEeqcVO6UFbEYXg"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_miSaYwiZEeqcVO6UFbEYXg"/>
+  </children>
+  <styles xsi:type="notation:StringValueStyle" xmi:id="_miSaZAiZEeqcVO6UFbEYXg" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xsi:type="notation:DiagramStyle" xmi:id="_miSaZQiZEeqcVO6UFbEYXg"/>
+  <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_miSaZgiZEeqcVO6UFbEYXg" diagramKindId="org.eclipse.papyrus.uml.diagram.activity">
+    <owner href="leaderelection1.uml#_miJQYAiZEeqcVO6UFbEYXg"/>
+  </styles>
+  <element href="leaderelection1.uml#_miSaUAiZEeqcVO6UFbEYXg"/>
+</notation:Diagram>

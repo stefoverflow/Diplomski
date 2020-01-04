@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sQ7NUAbGEeqcUs5alUPwMA" type="PapyrusUMLActivityDiagram" name="Activity Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_sQ7NUQbGEeqcUs5alUPwMA" type="Activity_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_sQ7NUgbGEeqcUs5alUPwMA" type="Activity_NameLabel"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_sQ7NUwbGEeqcUs5alUPwMA" type="Activity_KeywordLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sQ7NVAbGEeqcUs5alUPwMA" type="Activity_ParameterCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sQ7NVQbGEeqcUs5alUPwMA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sQ7NVgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQ7NVwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sQ7NWAbGEeqcUs5alUPwMA" type="Activity_PreconditionCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sQ7NWQbGEeqcUs5alUPwMA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sQ7NWgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQ7NWwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sQ7NXAbGEeqcUs5alUPwMA" type="Activity_PostconditionCompartment">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sQ7NXQbGEeqcUs5alUPwMA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sQ7NXgbGEeqcUs5alUPwMA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQ7NXwbGEeqcUs5alUPwMA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sQ7NYAbGEeqcUs5alUPwMA" type="Activity_ActivityNodeCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_uwMFEAbGEeqcUs5alUPwMA" type="InitialNode_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uwMsIAbGEeqcUs5alUPwMA" type="InitialNode_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_uwMsIQbGEeqcUs5alUPwMA" y="15"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_uwNTMAbGEeqcUs5alUPwMA" type="InitialNode_StereotypeLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_uwNTMQbGEeqcUs5alUPwMA" y="15"/>
+        </children>
+        <element xmi:type="uml:InitialNode" href="dvojstrukabarijeraENTER.uml#_uwC7IAbGEeqcUs5alUPwMA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uwMFEQbGEeqcUs5alUPwMA" x="355" y="8"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_kG9fwAbKEeqcUs5alUPwMA" type="OpaqueAction_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_kG-G0AbKEeqcUs5alUPwMA" type="OpaqueAction_NameLabel"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_kG-G0QbKEeqcUs5alUPwMA" type="OpaqueAction_FloatingNameLabel">
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_kG-G0gbKEeqcUs5alUPwMA" y="15"/>
+        </children>
+        <element xmi:type="uml:OpaqueAction" href="dvojstrukabarijeraENTER.uml#_kGnhgAbKEeqcUs5alUPwMA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kG_8AAbKEeqcUs5alUPwMA" x="251" y="108"/>
+      </children>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQ7NYQbGEeqcUs5alUPwMA"/>
+    </children>
+    <element xmi:type="uml:Activity" href="dvojstrukabarijeraENTER.uml#_sQfIcAbGEeqcUs5alUPwMA"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQ7NYgbGEeqcUs5alUPwMA"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_sQ7NYwbGEeqcUs5alUPwMA" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_sQ7NZAbGEeqcUs5alUPwMA"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_sQ7NZQbGEeqcUs5alUPwMA" diagramKindId="org.eclipse.papyrus.uml.diagram.activity">
+    <owner xmi:type="uml:Model" href="dvojstrukabarijeraENTER.uml#_sFeyUAbGEeqcUs5alUPwMA"/>
+  </styles>
+  <element xmi:type="uml:Activity" href="dvojstrukabarijeraENTER.uml#_sQfIcAbGEeqcUs5alUPwMA"/>
+</notation:Diagram>

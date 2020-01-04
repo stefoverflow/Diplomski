@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sFeyUAbGEeqcUs5alUPwMA" name="dvojstrukabarijera">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_sTBfEAbGEeqcUs5alUPwMA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_sQfIcAbGEeqcUs5alUPwMA" name="Activity1" node="_uwC7IAbGEeqcUs5alUPwMA _kGnhgAbKEeqcUs5alUPwMA _0qrJsAbKEeqcUs5alUPwMA _9enEgAbKEeqcUs5alUPwMA _CyG-cAbLEeqcUs5alUPwMA _X8BXcAbLEeqcUs5alUPwMA _YDrCIAbMEeqcUs5alUPwMA _YiBLAAbMEeqcUs5alUPwMA _ZhkjgAbMEeqcUs5alUPwMA _fRQ7EAeZEeq709Bl8bAGEw _rkuQwAeZEeq709Bl8bAGEw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_rzR1wAbLEeqcUs5alUPwMA" target="_0qrJsAbKEeqcUs5alUPwMA" source="_kGnhgAbKEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_soiCwAbLEeqcUs5alUPwMA" target="_9enEgAbKEeqcUs5alUPwMA" source="_0qrJsAbKEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_tb29IAbLEeqcUs5alUPwMA" target="_CyG-cAbLEeqcUs5alUPwMA" source="_9enEgAbKEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_uKHxUAbLEeqcUs5alUPwMA" target="_X8BXcAbLEeqcUs5alUPwMA" source="_CyG-cAbLEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_A4-dIAbMEeqcUs5alUPwMA" target="_kGnhgAbKEeqcUs5alUPwMA" source="_uwC7IAbGEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_LArWwAeZEeq709Bl8bAGEw" name="Ako je broj elemenata liste L jednak broju X" target="_YDrCIAbMEeqcUs5alUPwMA" source="_X8BXcAbLEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZK6n4AeZEeq709Bl8bAGEw" target="_ZhkjgAbMEeqcUs5alUPwMA" source="_YiBLAAbMEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aERRwAeZEeq709Bl8bAGEw" name="Ako je broj elemenata liste L manji od X" target="_YiBLAAbMEeqcUs5alUPwMA" source="_X8BXcAbLEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_x6SrsAeZEeq709Bl8bAGEw" target="_rkuQwAeZEeq709Bl8bAGEw" source="_YDrCIAbMEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_y6Q68AeZEeq709Bl8bAGEw" target="_rkuQwAeZEeq709Bl8bAGEw" source="_ZhkjgAbMEeqcUs5alUPwMA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_14WAMAeaEeq709Bl8bAGEw" target="_fRQ7EAeZEeq709Bl8bAGEw" source="_rkuQwAeZEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_uwC7IAbGEeqcUs5alUPwMA" name="START" outgoing="_A4-dIAbMEeqcUs5alUPwMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_kGnhgAbKEeqcUs5alUPwMA" name="Klijent kreira znode sa putanjom n=b+&quot;/&quot;+p " incoming="_A4-dIAbMEeqcUs5alUPwMA" outgoing="_rzR1wAbLEeqcUs5alUPwMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_0qrJsAbKEeqcUs5alUPwMA" name="Postavlja watch event: exists(b+&quot;/ready&quot;,true);" incoming="_rzR1wAbLEeqcUs5alUPwMA" outgoing="_soiCwAbLEeqcUs5alUPwMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9enEgAbKEeqcUs5alUPwMA" name="Kreira dete sa privremenim flagom: create(n,EPHEMERAL)" incoming="_soiCwAbLEeqcUs5alUPwMA" outgoing="_tb29IAbLEeqcUs5alUPwMA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_CyG-cAbLEeqcUs5alUPwMA" name="Poziva: L=getChildren(b,false)" incoming="_tb29IAbLEeqcUs5alUPwMA" outgoing="_uKHxUAbLEeqcUs5alUPwMA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_X8BXcAbLEeqcUs5alUPwMA" incoming="_uKHxUAbLEeqcUs5alUPwMA" outgoing="_LArWwAeZEeq709Bl8bAGEw _aERRwAeZEeq709Bl8bAGEw">
+      <name xsi:nil="true"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_YDrCIAbMEeqcUs5alUPwMA" name="create(b+&quot;/ready&quot;,REGULAR)" incoming="_LArWwAeZEeq709Bl8bAGEw" outgoing="_x6SrsAeZEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_YiBLAAbMEeqcUs5alUPwMA" name="Čeka watch event" incoming="_aERRwAeZEeq709Bl8bAGEw" outgoing="_ZK6n4AeZEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:AcceptEventAction" xmi:id="_ZhkjgAbMEeqcUs5alUPwMA" name="Watch event je okinut kada je ready znode kreiran" incoming="_ZK6n4AeZEeq709Bl8bAGEw" outgoing="_y6Q68AeZEeq709Bl8bAGEw">
+      <trigger xmi:type="uml:Trigger" xmi:id="_ZhkjgQbMEeqcUs5alUPwMA" name="timevent">
+        <event xmi:type="uml:TimeEvent" href="../barijera/barijera.uml#_GqlHYASzEeqFcsT6p02TUw"/>
+      </trigger>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_fRQ7EAeZEeq709Bl8bAGEw" name="END" incoming="_14WAMAeaEeq709Bl8bAGEw"/>
+    <node xmi:type="uml:JoinNode" xmi:id="_rkuQwAeZEeq709Bl8bAGEw" incoming="_x6SrsAeZEeq709Bl8bAGEw _y6Q68AeZEeq709Bl8bAGEw" outgoing="_14WAMAeaEeq709Bl8bAGEw"/>
+  </packagedElement>
+</uml:Model>

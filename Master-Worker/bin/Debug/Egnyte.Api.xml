@@ -1,0 +1,1093 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Egnyte.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Egnyte.Api.Audit.AuditClient.CreateLoginAuditReport(Egnyte.Api.Audit.AuditReportFormat,System.DateTime,System.DateTime,System.Collections.Generic.List{System.String},System.Collections.Generic.List{Egnyte.Api.Audit.AuditReportAccessPoint},System.Collections.Generic.List{System.String})">
+            <summary>
+            Creates login audit report
+            </summary>
+            <param name="format">Required. Determines format of audit report data</param>
+            <param name="startDate">Required. Start of date range for report</param>
+            <param name="endDate">Required. End of date range for report</param>
+            <param name="events">Required. List of events to report on. At least one event must be specified</param>
+            <param name="accessPoints">Optional. List of Egnyte access points covered by report.
+            If not specified or empty then report will cover all access points</param>
+            <param name="users">Optional. List of usernames to report on.
+            If not specified or empty then report will cover all users</param>
+            <returns>Id fo an audit report</returns>
+        </member>
+        <member name="F:Egnyte.Api.Audit.AuditReportFormat.CSV">
+            <summary>
+            Comma Separated Value
+            </summary>
+        </member>
+        <member name="F:Egnyte.Api.Audit.AuditReportFormat.Json">
+            <summary>
+            JSON format
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Common.EgnyteApiException.StatusCode">
+            <summary>
+            Status code of response from Egnyte API
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Common.EgnyteApiException.Headers">
+            <summary>
+            Headers from response
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.EgnyteClient.#ctor(System.String,System.String,System.Net.Http.HttpClient,System.Nullable{System.TimeSpan},System.String)">
+            <summary>
+            
+            </summary>
+            <param name="token">OAuth 2.0 token obtained from Egnyte</param>
+            <param name="domain">Domain on which you connect to egnyte,
+            i.e.: domain is 'mydomain', when url looks like: mydomain.egnyte.com</param>
+            <param name="httpClient">You can provide your own httpClient. Optional</param>
+            <param name="requestTimeout">You can provide timeout for calling Egnyte API,
+            by default it's 10 minutes. This parameter is optional</param>
+            <param name="host">Full host name on which you connect to egnyte,
+            i.e.: host is 'my.custom.host.com', when url looks like: my.custom.host.com</param>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Files">
+            <summary>
+            Files allows you to perform the normal file system actions: create, update, move, copy, delete,
+            download, and list information about files and folders
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Users">
+            <summary>
+            Users allows you to create, update, get information about, and delete users.
+            You can customize settings like user role or authentication type and even control whether a new user
+            receives an invitation email
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Links">
+            <summary>
+            Links allows you to list the file and folder links in your domain,
+            show the details of an individual link, create new links, and delete links
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Groups">
+            <summary>
+            Groups allows you to list the groups in your domain, show the details of an individual group,
+            manage group membership, create new groups, rename groups, and delete groups.
+            This API is designed to comply with SCIM 1.1
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Permissions">
+            <summary>
+            With Permissions you can list, set, and remove folder permissions for users and groups.
+            Refer to the table here: https://developers.egnyte.com/docs/read/Egnyte_Permissions_API#Permissions
+            for details on our different permission levels
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Search">
+            <summary>
+            The Search API allows you to find content stored in Egnyte based on filenames,
+            metadata, and text content. Searches are performed in the context of the user token being passed.
+            Accordingly, a user will only see results for contents they have permission to access.
+            Note, this endpoint is currently limited to searching for files only
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.EgnyteClient.Audit">
+            <summary>
+            The Audit Reporting API allows you to programmatically generate and retrieve reports
+            on login activity, file actions, and permission changes. The scope of these reports
+            effectively gives you a 360° view of the activity in your account
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.EgnyteClientHelper.GetTokenFromCode(System.String,System.String,System.String,System.Uri,System.String,System.Net.Http.HttpClient)">
+            <summary>
+            Send request to exchange the code for a token
+            </summary>
+            <param name="userDomain">This is the user's Egnyte domain. An example domain name is "acme".
+            Note that initially your API key will only work with the single Egnyte domain you told us you would use for testing.
+            When we approve your completed app, we will issue you a new key that works with any Egnyte domain</param>
+            <param name="clientId">This is the API key that was provided to you when you registered your application</param>
+            <param name="clientSecret">This is the secret key that was provided with your key to you when you registered
+            your application. If your application key was requested prior to January 2015, please register for a new key
+            to get one with a client secret</param>
+            <param name="redirectUri">This is the URL that we will redirect to after the user has allowed or denied
+            your request to access their account. This must be an HTTPS URL and must match the callback URL configured
+            for your key. E.g. "https://yourapp.com/oauth"</param>
+            <param name="authorizationCode">The authorization code received from the authorization server after allowing
+            application to use Egnyte account</param>
+            <param name="httpClient">Http client for sending the request</param>
+            <returns>Token info</returns>
+        </member>
+        <member name="P:Egnyte.Api.Files.UploadedFileMetadata.Checksum">
+            <summary>
+            SHA512 hash of entire file that can be used for validating upload integrity
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Files.UploadedFileMetadata.LastModified">
+            <summary>
+            Indicates last modified date for file
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Files.UploadedFileMetadata.EntryId">
+            <summary>
+            Current value of the entity tag that can be used to compare whether two versions of a resource are the same
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.CreateFolder(System.String)">
+            <summary>
+            Creates a folder for specified path
+            </summary>
+            <param name="path">Full path to the new folder</param>
+            <returns>Returns true if creating of a folder succeeded</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.CreateOrUpdateFile(System.String,System.IO.MemoryStream)">
+            <summary>
+            Creates or updates a file. To upload files larger than 100 MB, use the ChunkedUpload method
+            </summary>
+            <param name="path">Full path to the file</param>
+            <param name="file">Content of a file in a memory stream</param>
+            <returns>Response with checksum and ids.
+            Checksum is a SHA512 hash of entire file that can be used for validating upload integrity</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.MoveFileOrFolder(System.String,System.String)">
+            <summary>
+            Moves a file or folder
+            </summary>
+            <param name="path">Path to file or folder to move</param>
+            <param name="destination">Full path where file/folder will be moved</param>
+            <returns>Returns true if moving file or folder succeeded</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.CopyFileOrFolder(System.String,System.String)">
+            <summary>
+            Copies a file or folder
+            </summary>
+            <param name="path">Path to file or folder to copy</param>
+            <param name="destination">Full path where file/folder will be copied</param>
+            <returns>Returns true if copying file or folder succeeded</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.DownloadFile(System.String,Egnyte.Api.Files.Range,System.String)">
+            <summary>
+            Downloads a file (note that this method supports ranged downloads)
+            </summary>
+            <param name="path">Full path to the file</param>
+            <param name="rangeOfBytes">The range of bytes to download, use of this header is optional</param>
+            <param name="entryId">Specifies the entry ID of the file version to download.
+            Entry IDs are shown in the detail listing for a file</param>
+            <returns>File download information with data in bytes</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.DownloadFileAsStream(System.String)">
+            <summary>
+            Downloads a file as a stream (suitable for files larger then 2 GB)
+            </summary>
+            <param name="path">Full path to the file</param>
+            <returns>File download information with data in a stream</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.ListFileOrFolder(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            List information about a file or folder (including folder contents)
+            </summary>
+            <param name="path">Full path to folder or file</param>
+            <param name="listContent">If false, then do not include contents of folder in response</param>
+            <param name="allowedLinkTypes">If true, then show allowed_file_link_types,
+            allowed_folder_link_types fields, and allow_upload_links fields</param>
+            <returns>Metadata info about file or folder</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.DeleteFileOrFolder(System.String,System.String)">
+            <summary>
+            Deletes a file or folder.
+            </summary>
+            <param name="path">Full path to folder or file</param>
+            <param name="entryId">Optional, entry id to a file</param>
+            <returns>Returns true if deleting file or folder succeeded</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.ChunkedUploadFirstChunk(System.String,System.IO.MemoryStream)">
+            <summary>
+            The chunked upload flow provides a mechanism to upload large files—we recommend only using this flow
+            for files larger than 100 MB. To upload files of smaller sizes, you can use the CreateOrUpdateFile method
+            </summary>
+            <param name="path">Full path to file</param>
+            <param name="file">Stream with the file content</param>
+            <returns>Uploaded chunk metadata</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.ChunkedUploadNextChunk(System.String,System.Int32,System.String,System.IO.MemoryStream)">
+            <summary>
+            Method for uploading second and consecutive chunks of file. To upload first chunk use ChunkedUploadFirstChunk
+            </summary>
+            <param name="path">Full path to file</param>
+            <param name="chunkNumber">Chunk number. First should be 1, others 2, 3, etc.</param>
+            <param name="chunkUploadId">Chunk upload id from response after uploading first chunk</param>
+            <param name="file">Stream with part of file content</param>
+            <returns>Uploaded chunk metadata</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.ChunkedUploadLastChunk(System.String,System.Int32,System.String,System.IO.MemoryStream)">
+            <summary>
+            Method for uploading last chunk of file. To upload previous chunks use
+            ChunkedUploadFirstChunk or ChunkedUploadNextChunk
+            </summary>
+            <param name="path">Full path to file</param>
+            <param name="chunkNumber">Chunk number. First should be 1, others 2, 3, etc.</param>
+            <param name="chunkUploadId">Chunk upload id from response after uploading first chunk</param>
+            <param name="file">Stream with part of file content</param>
+            <returns>Uploaded file metadata</returns>
+        </member>
+        <member name="M:Egnyte.Api.Files.FilesClient.UpdateFolder(System.String,System.String,System.Nullable{Egnyte.Api.Files.PublicLinksType},System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Uses Folder Options API to modify folder options
+            </summary>
+            <param name="path">Full path to folder</param>
+            <param name="folderDescription">Text description of the folder. Maximum 200 characters</param>
+            <param name="publicLinks">Choose to allow public links from this folder for files and folders, files only, or not to allow public links.</param>
+            <param name="restrictMoveDelete">Restricts move and delete operations to only Admins and Owners if true. This can be applied to /Shared and /Private top-level folders.</param>
+            <param name="emailPreferences">JSON object with boolean keys that can modify periodic emails about file changes.</param>
+            <param name="allowLinks">Choose whether links can be shared to files or sub-folders within this folder.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupDetails.Schemas">
+            <summary>
+            The SCIM schema version of the response
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupDetails.Id">
+            <summary>
+            The globally unique group ID
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupDetails.DisplayName">
+            <summary>
+            The name of the group
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupDetails.Members">
+            <summary>
+            An array containing all users in the group
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupMember.#ctor(System.Int64,System.Nullable{System.Boolean})">
+            <summary>
+            Creates new member of a group
+            </summary>
+            <param name="id">The globally unique id of a group member</param>
+            <param name="deleteUser">Specifies if user should be deleted</param>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupMember.Id">
+            <summary>
+            The globally unique id of a group member
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupMember.DeleteUser">
+            <summary>
+            Specifies if user should be deleted
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupResource.Id">
+            <summary>
+            The globally unique group ID
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupResource.DisplayName">
+            <summary>
+            The name of the group
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.Groups.Schemas">
+            <summary>
+            The SCIM schema version of the response
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.Groups.TotalResults">
+            <summary>
+            The total number of results matching the query
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.Groups.ItemsPerPage">
+            <summary>
+            The number of results returned
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.Groups.StartIndex">
+            <summary>
+            The 1-based index of the first result in the current set of results
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.Groups.Resources">
+            <summary>
+            A JSON array that holds all of the group objects
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.ListGroups(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Lists user groups
+            </summary>
+            <param name="startIndex">Optional. The 1-based index of the initial record
+            being requested (Integer ≥ 1)</param>
+            <param name="count">Optional. The number of entries per page (min 1, max 100)</param>
+            <param name="filter">Allows you to request a subset of groups
+            These terms are not case sensitive. For example:
+            filter=displayname sw "acc" (for starts with "acc")</param>
+            <returns></returns>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.ShowSingleGroup(System.String)">
+            <summary>
+            Shows which users are in the group and view group attributes
+            </summary>
+            <param name="groupId">Required. The globally unique group ID</param>
+            <returns>Group details and it's members</returns>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.CreateGroup(System.String,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Creates user group
+            </summary>
+            <param name="displayName">Required. The name of the group</param>
+            <param name="members">Required. An array containing all users in the group</param>
+            <returns>Group details and it's members</returns>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.FullGroupUpdate(System.String,System.String,System.Collections.Generic.List{System.Int64})">
+            <summary>
+            Overrides all of the attributes of a group. This is especially useful for making
+            a change to settings that ensures all prior settings are removed
+            </summary>
+            <param name="groupId">Required. The globally unique group ID</param>
+            <param name="displayName">Required. The name of the group</param>
+            <param name="members">Required. An array containing all users in the group</param>
+            <returns>Group details and it's members</returns>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.PartialGroupUpdate(System.String,System.String,System.Collections.Generic.List{Egnyte.Api.Groups.GroupMember})">
+            <summary>
+            Updates specific attributes of a group. This is especially useful for making
+            incremental modifications to a folder
+            </summary>
+            <param name="groupId">Required. The globally unique group ID</param>
+            <param name="displayName">Optional. Specifying this parameter will rename the group</param>
+            <param name="members">Optional. An array containing all users being modified.
+            It will modify only users specifyied. If you want to remove a user,
+            use DeleteUser property in GroupMember class.</param>
+            <returns>Group details and it's members</returns>
+        </member>
+        <member name="M:Egnyte.Api.Groups.GroupsClient.DeleteGroup(System.String)">
+            <summary>
+            Deletes a group
+            </summary>
+            <param name="groupId">Required. The globally unique group ID</param>
+            <returns>True if deletion succeeded</returns>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupUser.Username">
+            <summary>
+            The username of a group member
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupUser.Value">
+            <summary>
+            The globally unique id of a group member
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Groups.GroupUser.Display">
+            <summary>
+            The display name of a group member
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Path">
+            <summary>
+            The absolute path of the target resource, either file or folder.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Type">
+            <summary>
+            The type of link, either file, folder, or upload
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Accessibility">
+            <summary>
+            Who a link is accessible by, one of anyone, password, domain, or recipients.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Notify">
+            <summary>
+            Boolean as to whether the link creator will be notified via email when link is accessed.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.LinkToCurrent">
+            <summary>
+            Boolean as to whether the link will always refer to the current version of file. Only applicable for file links.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.CreationDate">
+            <summary>
+            Date and time of creation of the link
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.CreatedBy">
+            <summary>
+            Username of the user that created the link
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Protection">
+            <summary>
+            If "PREVIEW" for a file link, it is a a preview-only link to the file, otherwise it is "NONE"
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Recipients">
+            <summary>
+            An array of valid email addresses to which the link was sent.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Url">
+            <summary>
+            The full url of the link
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetails.Id">
+            <summary>
+            The id of the link
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetailsV2.ResourceId">
+            <summary>
+            Id of the associated resource, either group id if it is a file link,
+            or the folder id if it is a folder or upload link
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetailsV2.ExpiryClicks">
+            <summary>
+            Number of clicks left on the link before expiration.
+            This field is only shown if the link is to expire via clicks
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinkDetailsV2.ExpiryDate">
+            <summary>
+            Date and time of the expiration of the link.
+            This field is only shown if the link is to expire by date
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.Links.LinksClient.ListLinks(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Egnyte.Api.Links.LinkType},System.Nullable{Egnyte.Api.Links.LinkAccessibility},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lists all links. Please note, that if the user executing this method is not an admin,
+            then only links created by the user will be listed
+            </summary>
+            <param name="path">Optional. List links to a file or folder specified by its full path</param>
+            <param name="userName">Optional. List links created by this user</param>
+            <param name="createdBefore">Optional. List links created before a given date</param>
+            <param name="createdAfter">Optional. List links created after a given date</param>
+            <param name="linkType">Optional. List links that are "file" or "folder"</param>
+            <param name="accessibility">Optional. Filter to links whose accessiblity is "anyone,"
+            "password," "domain," or "recipients"</param>
+            <param name="offset">Optional. The 0-based index of the initial record being requested</param>
+            <param name="count">Optional. Limit number of entries per page. By default,
+            all entries are returned</param>
+            <returns></returns>
+        </member>
+        <member name="M:Egnyte.Api.Links.LinksClient.ListLinksV2(System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Egnyte.Api.Links.LinkType},System.Nullable{Egnyte.Api.Links.LinkAccessibility},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Lists all links with details. Please note, that if the user executing this method is not an admin,
+            then only links created by the user will be listed
+            </summary>
+            <param name="path">Optional. List links to a file or folder specified by its full path</param>
+            <param name="userName">Optional. List links created by this user</param>
+            <param name="createdBefore">Optional. List links created before a given date
+            (ISO-8601 e.g., 2017-03-05T14:55:59+0000).</param>
+            <param name="createdAfter">Optional. List links created after a given date
+            (ISO-8601 e.g., 2017-03-05T14:55:59+0000).</param>
+            <param name="linkType">Optional. List links that are "file" or "folder"</param>
+            <param name="accessibility">Optional. Filter to links whose accessiblity is "anyone,"
+            "password," "domain," or "recipients"</param>
+            <param name="offset">Optional. The 0-based index of the initial record being requested</param>
+            <param name="count">Limit number of entries per page.
+            By default the max count of 500 entries is returned.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Egnyte.Api.Links.LinksClient.GetLinkDetails(System.String)">
+            <summary>
+            Gets the details of a link
+            </summary>
+            <param name="linkId">Required. Link id, retrieved earlier from Egnyte</param>
+            <returns>Details of the link</returns>
+        </member>
+        <member name="M:Egnyte.Api.Links.LinksClient.CreateLink(Egnyte.Api.Links.NewLink)">
+            <summary>
+            Creates link
+            </summary>
+            <param name="link">Parameters</param>
+            <returns>Created link details</returns>
+        </member>
+        <member name="M:Egnyte.Api.Links.LinksClient.DeleteLink(System.String)">
+            <summary>
+            Delets a link
+            </summary>
+            <param name="linkId">Required. Link id, retrieved earlier from Egnyte</param>
+            <returns>Returns true if deleting link succeeded</returns>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinksListV2.Links">
+            <summary>
+            An array containing the full json information for all links for your domain
+            that this user can see within any specified ranges
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.LinksListV2.Count">
+            <summary>
+            The number of links visible to the user in the domain that are returned
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Path">
+            <summary>
+            Required. The absolute path of the target file or folder.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Type">
+            <summary>
+            Required. This determines what type of link will be created.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Accessibility">
+            <summary>
+            Required (except upload links). Determines who a link is accessible by.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Password">
+            <summary>
+            Optional. When accesibility is set to password, then password can be provided.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.SendEmail">
+            <summary>
+            Optional. If true is set, link will be sent via email by Egnyte.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Recipients">
+            <summary>
+            Optional. List email addresses of recipients of the link. Only required if send_email is True.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Message">
+            <summary>
+            Optional. Personal message to be sent in link email. Only applies if send_email is True.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.CopyMe">
+            <summary>
+            Optional. If True is set, a copy of the link message will be sent to the link creator.
+            Only applies if send_email is True. Defaults to False.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.Notify">
+            <summary>
+            Optional. If True is set, link creator will be notified via email when link is accessed.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.LinkToCurrent">
+            <summary>
+            Optional. If True is set, link will always refer to current version of file.
+            Only applicable for file links.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.ExpiryDate">
+            <summary>
+            Optional. The expiry date for the link. If expiry_date is specified,
+            expiry_clicks cannot be set.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.ExpiryClicks">
+            <summary>
+            Optional. The number of clicks the link is valid for.
+            If expiry_clicks is specified, expiry_date cannot be set.
+            Value must be between 1 - 10, inclusive.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Links.NewLink.FolderPerRecipient">
+            <summary>
+            Optional. If True then each recipient's uploaded data will be put into a separate folder.
+            Only applies to upload links.
+            </summary>
+        </member>
+        <member name="F:Egnyte.Api.OAuthAuthorizationFlow.Code">
+            <summary>
+            This represents OAuth 2.0 Authorization Code flow.
+            The authorization code flow is most commonly used by applications that make server side requests.
+            </summary>
+        </member>
+        <member name="F:Egnyte.Api.OAuthAuthorizationFlow.ImplicitGrant">
+            <summary>
+            This represents OAuth 2.0 Implicit Grant flow.
+            The implicit grant flow is most commonly used by applications browser applications.
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.OAuthHelper.GetAuthorizeUri(Egnyte.Api.OAuthAuthorizationFlow,System.String,System.String,System.Uri,System.String,System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Gets the URI used to initiate the OAuth2.0 authorization flow.
+            </summary>
+            <param name="oAuthFlow">
+            This is the OAuth 2.0 flow to authenticate your app.
+            More information about flow can be find 
+            <a href="https://developers.egnyte.com/docs/read/Public_API_Authentication#Public-Applications">documentation</a>
+            </param>
+            <param name="userDomain">
+            This is the user's Egnyte domain. An example domain name is "acme".
+            Note that initially your API key will only work with the single Egnyte domain you told us you would use for testing.
+            When we approve your completed app, we will issue you a new key that works with any Egnyte domain.
+            </param>
+            <param name="clientId">
+            This is the API key that was provided to you when you registered your application.
+            </param>
+            <param name="redirectUri">
+            This is the URL that we will redirect to after the user has allowed or denied
+            your request to access their account. This must be an HTTPS URL and must match the callback URL configured
+            for your key. E.g. "https://yourapp.com/oauth"
+            </param>
+            <param name="clientSecret">
+            This is the secret key that was provided with your key to you when you registered
+            your application. If your application key was requested prior to January 2015, please register for a new key
+            to get one with a client secret.
+            </param>
+            <param name="scope">
+            Although this parameter is optional from a technical standpoint, all third party applications
+            must scope token requests to only the endpoints they need. We will not approve applications for production use
+            unless they properly scope their token requests or demonstrate a valid need for global scope. More details
+            on OAuth Scopes are provided
+            <a href="https://developers.egnyte.com/docs/read/Public_API_Authentication#oauth_scope">here</a>.
+            </param>
+            <param name="state">
+            As described in the OAuth 2.0 spec, this optional parameter is an opaque value used by the client
+            to maintain state between the request and callback. The authorization server includes this value when redirecting
+            the user-agent back to the client. The parameter can be used for preventing cross-site request forgery and passing
+            the Egnyte domain as part of the response from the authorization server.
+            </param>
+            <param name="mobile">
+            You may optionally set this parameter to true to have the user directed to a mobile friendly
+            login page instead of the default page designed for a desktop browser.
+            </param>
+            <returns>
+            The url, where the user will be taken to an authorization page that asks them to explicitly permit your app
+            to access their Egnyte account. This page displays information about your application taken from your profile.
+            The user must provide their login credentials on this page to authorize your application.
+            </returns>
+        </member>
+        <member name="M:Egnyte.Api.OAuthHelper.GetAuthorizationUriResourceOwnerFlow(System.String,System.String,System.String,System.String)">
+            <summary>
+            Gets the URI used to initiate the OAuth2.0 resuorce owner flow for internal applications.
+            </summary>
+            <param name="userDomain">
+            This is the user's Egnyte domain. An example domain name is "acme".
+            Note that initially your API key will only work with the single Egnyte domain you told us you would use for testing.
+            When we approve your completed app, we will issue you a new key that works with any Egnyte domain.
+            </param>
+            <param name="clientId">
+            This is the API key that was provided to you when you registered your application.
+            E.g. "cba97f3apst9eqzdr5hskggx".
+            </param>
+            <param name="username">This is the Egnyte username of the user on whose behalf you are acting.</param>
+            <param name="password">his is the Egnyte password of the user.</param>
+            <returns>Uri to get a token</returns>
+        </member>
+        <member name="M:Egnyte.Api.OAuthHelper.GetTokenRequestParameters(System.String,System.String,System.String,System.Uri,System.String)">
+            <summary>
+            Gets the URI used for exchanging the code for a token
+            </summary>
+            <param name="userDomain">This is the user's Egnyte domain. An example domain name is "acme".
+            Note that initially your API key will only work with the single Egnyte domain you told us you would use for testing.
+            When we approve your completed app, we will issue you a new key that works with any Egnyte domain</param>
+            <param name="clientId">This is the API key that was provided to you when you registered your application</param>
+            <param name="clientSecret">This is the secret key that was provided with your key to you when you registered
+            your application. If your application key was requested prior to January 2015, please register for a new key
+            to get one with a client secret</param>
+            <param name="redirectUri">This is the URL that we will redirect to after the user has allowed or denied
+            your request to access their account. This must be an HTTPS URL and must match the callback URL configured
+            for your key. E.g. "https://yourapp.com/oauth"</param>
+            <param name="authorizationCode">The authorization code received from the authorization server after allowing
+            application to use Egnyte account</param>
+            <returns>Uri used for exchanging the code for a token</returns>
+        </member>
+        <member name="M:Egnyte.Api.OAuthHelper.ParseTokenFromUrlResponse(System.String)">
+            <summary>
+            Parses responses from url parameters after hash
+            </summary>
+            <param name="urlHash">Part of response url after hash, that you are redirected to after authorization in Egnyte page
+            in the Implicit Grant flow</param>
+            <returns>Token response</returns>
+        </member>
+        <member name="M:Egnyte.Api.Permissions.PermissionsClient.SetFolderPermissions(System.String,Egnyte.Api.Permissions.PermissionType,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets the effective permission level for specific users or groups on a given folder
+            </summary>
+            <param name="path">Required. Full path to the folder</param>
+            <param name="permission">Required. Type of permission: None, Viewer, Editor, Full, Owner</param>
+            <param name="users">List of usernames to set permissions for
+            At least one user or group must be specified</param>
+            <param name="groups">List of groupnames to set permissions for
+            At least one user or group must be specified</param>
+            <returns>True if operation succedes</returns>
+        </member>
+        <member name="M:Egnyte.Api.Permissions.PermissionsClient.GetFolderPermissions(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            Gets the permissions for a given folder
+            </summary>
+            <param name="path">Required. Full path to the folder</param>
+            <param name="users">Optional. List of usernames to report on
+            If neither users nor groups is set then permissions for all subjects are returned</param>
+            <param name="groups">Optional. List of groups to report on
+            If neither users nor groups is set then permissions for all subjects are returned</param>
+            <returns></returns>
+        </member>
+        <member name="M:Egnyte.Api.Permissions.PermissionsClient.GetEffectivePermissionsForUser(System.String,System.String)">
+            <summary>
+            Gets the effective permissions for a user for a given folder.
+            This effective permission takes into account both user and group permissions
+            that apply to the given user, along with permission inheritance
+            </summary>
+            <param name="username">Required. Egnyte username</param>
+            <param name="path">Required. Full path to the folder</param>
+            <returns>Effective user permissions for folder</returns>
+        </member>
+        <member name="M:Egnyte.Api.Search.SearchClient.Search(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Searching for files
+            </summary>
+            <param name="query">Required. The search string you want to find</param>
+            <param name="offset">Optional. The 0-based index of the initial record
+            being requested (Integer ≥ 0)</param>
+            <param name="count">Optional. The number of entries per page (min 1, max 100)</param>
+            <param name="folder">Optional. Limit the result set to only items contained
+            in the specified folder</param>
+            <param name="modifiedBefore">Optional. Limit to results modified before given date</param>
+            <param name="modifiedAfter">Optional. Limit to results modified after given date</param>
+            <returns>Search results</returns>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.Name">
+            <summary>
+            The name of the file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.Path">
+            <summary>
+            The path to the file in Egnyte.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.Type">
+            <summary>
+            The MIME type of the file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.Size">
+            <summary>
+            The size of the file in bytes.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.Snippet">
+            <summary>
+            A plain text snippet of the text containing the matched content.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.EntryId">
+            <summary>
+            A GUID for that particular instance of a file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.LastModified">
+            <summary>
+            Timestamp representing the last modified date of the file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.UploadedBy">
+            <summary>
+            The formatted name of the user who uploaded the file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.UploadedByUsername">
+            <summary>
+            The username of the user who uploaded the file.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.NumberOfVersions">
+            <summary>
+            The number of versions of the file available.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.SnippetHtml">
+            <summary>
+            An HTML formatted snippet of the text containing the matched content.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResultItem.IsFolder">
+            <summary>
+            A boolean value stating if the object is a file or folder.
+            Please note that, currently, this API only returns file objects.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResults.Results">
+            <summary>
+            List that holds all of the matched content
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResults.TotalCount">
+            <summary>
+            The total number of results matching the query
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResults.Offset">
+            <summary>
+            The 0-based index of the first result in the current set of results
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Search.SearchResults.Count">
+            <summary>
+            The number of results returned
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.UserName">
+            <summary>
+            Required. The Egnyte username for the user. Username must start with a letter or digit.
+            Special characters are not supported (with the exception of periods, hyphens, and underscores)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.ExternalId">
+            <summary>
+            Required. This is an immutable unique identifier provided by the API consumer.
+            Any plain text (e.g. S-1-5-21-3623811015-3361044348-30300820-1013)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.Email">
+            <summary>
+            Required. The email address of the user. Any valid email address (e.g. admin@acme.com)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.FamilyName">
+            <summary>
+            Required. The last name of the user. Any plain text (e.g. Smith)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.GivenName">
+            <summary>
+            Required. The first name of the user. Any plain text (e.g. John)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.Active">
+            <summary>
+            Required. Whether the user is active or inactive
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.AuthType">
+            <summary>
+            Required. The authentication type for the user
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.UserType">
+            <summary>
+            Required. The type of the user
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.Role">
+            <summary>
+            Optional. The role assigned to the user. Only applicable for Power Users.
+            Value can be 'Default' or custom role name
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.IdpUserId">
+            <summary>
+            Optional. Only required if the user is SSO authenticated and not using default user mapping.
+            Do not specify if user is not SSO authenticated. This is the way the user is identified within
+            the SAML Response from an SSO Identity Provider, i.e. the SAML Subject (e.g. jsmith)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.UserPrincipalName">
+            <summary>
+            Optional. Do not specify if user is not AD authenticated. Used to bind child authentication policies
+            to a user when using Active Directory authentication in a multi-domain setup (e.g. jmiller@example.com)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.Id">
+            <summary>
+            An opaque, immutable, unique identifier for the user, generated by Egnyte.
+            This identifier is used to refer to the user in all API calls
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.ExistingUser.Locked">
+            <summary>
+            If user is locked
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.NewUser.SendInvite">
+            <summary>
+            Required. If set to true when creating a user,
+            an invitation email will be sent (if the user is created in active state).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.UserName">
+            <summary>
+            Required. The Egnyte username for the user. Username must start with a letter or digit.
+            Special characters are not supported (with the exception of periods, hyphens, and underscores).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.ExternalId">
+            <summary>
+            Required. This is an immutable unique identifier provided by the API consumer.
+            Any plain text (e.g. S-1-5-21-3623811015-3361044348-30300820-1013).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.Email">
+            <summary>
+            Required. The email address of the user. Any valid email address (e.g. admin@acme.com).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.FamilyName">
+            <summary>
+            Required. The last name of the user. Any plain text (e.g. Smith).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.GivenName">
+            <summary>
+            Required. The first name of the user. Any plain text (e.g. John).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.Active">
+            <summary>
+            Required. Whether the user is active or inactive.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.AuthType">
+            <summary>
+            Required. The authentication type for the user.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.UserType">
+            <summary>
+            Required. The type of the user.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.Role">
+            <summary>
+            Optional. The role assigned to the user. Only applicable for Power Users.
+            Value can be 'Default' or custom role name
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.IdpUserId">
+            <summary>
+            Optional. Only required if the user is SSO authenticated and not using default user mapping.
+            Do not specify if user is not SSO authenticated. This is the way the user is identified within
+            the SAML Response from an SSO Identity Provider, i.e. the SAML Subject (e.g. jsmith)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.User.UserPrincipalName">
+            <summary>
+            Optional. Do not specify if user is not AD authenticated. Used to bind child authentication policies
+            to a user when using Active Directory authentication in a multi-domain setup (e.g. jmiller@example.com)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserList.TotalResults">
+            <summary>
+            Non-negative Integer. Specifies the total number
+            of results matching the query; e.g., 1000
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserList.ItemsPerPage">
+            <summary>
+            Non-negative Integer. Specifies the number of search results
+            returned in a query response page; e.g., 50
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserList.StartIndex">
+            <summary>
+            The 1-based index of the first result in the current
+            set of search results; e.g., 1
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserList.Users">
+            <summary>
+            Matching users
+            </summary>
+        </member>
+        <member name="M:Egnyte.Api.Users.UsersClient.CreateUser(Egnyte.Api.Users.NewUser)">
+            <summary>
+            Creates single user
+            </summary>
+            <param name="user">User</param>
+            <returns>Created user with Id</returns>
+        </member>
+        <member name="M:Egnyte.Api.Users.UsersClient.UpdateUser(Egnyte.Api.Users.UserUpdate)">
+            <summary>
+            Updates user
+            </summary>
+            <param name="user">User with fields you want to update</param>
+            <returns>Updated user</returns>
+        </member>
+        <member name="M:Egnyte.Api.Users.UsersClient.GetUser(System.Int64)">
+            <summary>
+            Retrieves a single user
+            </summary>
+            <param name="id">An opaque, immutable, unique identifier for the user, generated by Egnyte.
+            This identifier is used to refer to the user in all API calls</param>
+            <returns>Existing user</returns>
+        </member>
+        <member name="M:Egnyte.Api.Users.UsersClient.GetUserList(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String)">
+            <summary>
+            Retrieves all, or a chosen subset, of users
+            </summary>
+            <param name="startIndex">Optional. The 1-based index of the first search result.
+            Non-negative integer that is ≥ 1</param>
+            <param name="count">Optional. Specifies the desired maximum number of search results
+            per page; e.g., 50. Must be a non-negative integer. The maximum count value supported is 100</param>
+            <param name="filter">Optional. Allows you to request a subset of users.
+            Supported attributes: email, externalId, userName; e.g., Username eq "john"</param>
+            <returns></returns>
+        </member>
+        <member name="M:Egnyte.Api.Users.UsersClient.DeleteUser(System.Int64)">
+            <summary>
+            Deletes a single user
+            </summary>
+            <param name="id">An opaque, immutable, unique identifier for the user, generated by Egnyte.
+            This identifier is used to refer to the user in all API calls</param>
+            <returns>True if deletion succeeded</returns>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.Id">
+            <summary>
+            Required. An opaque, immutable, unique identifier for the user, generated by Egnyte.
+            This identifier is used to refer to the user in all API calls.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.Email">
+            <summary>
+            Optional. The email address of the user. Any valid email address (e.g. admin@acme.com).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.FamilyName">
+            <summary>
+            Optional. The last name of the user. Any plain text (e.g. Smith).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.GivenName">
+            <summary>
+            Optional. The first name of the user. Any plain text (e.g. John).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.Active">
+            <summary>
+            Optional. Whether the user is active or inactive.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.SendInvite">
+            <summary>
+            Optional. If set to true when creating a user,
+            an invitation email will be sent (if the user is created in active state).
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.AuthType">
+            <summary>
+            Optional. The authentication type for the user.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.UserType">
+            <summary>
+            Optional. The type of the user.
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.IdpUserId">
+            <summary>
+            Optional. Only required if the user is SSO authenticated and not using default user mapping.
+            Do not specify if user is not SSO authenticated. This is the way the user is identified within
+            the SAML Response from an SSO Identity Provider, i.e. the SAML Subject (e.g. jsmith)
+            </summary>
+        </member>
+        <member name="P:Egnyte.Api.Users.UserUpdate.UserPrincipalName">
+            <summary>
+            Optional. Do not specify if user is not AD authenticated. Used to bind child authentication policies
+            to a user when using Active Directory authentication in a multi-domain setup (e.g. jmiller@example.com)
+            </summary>
+        </member>
+    </members>
+</doc>

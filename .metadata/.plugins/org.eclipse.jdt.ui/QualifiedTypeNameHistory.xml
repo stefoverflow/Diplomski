@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
+<fullyQualifiedTypeName name="java.util.ConcurrentModificationException"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.WatchedEvent"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.KeeperException"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.ZooKeeper"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.ZooDefs.Ids"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.CreateMode"/>
+<fullyQualifiedTypeName name="org.apache.zookeeper.ZooKeeper.States"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

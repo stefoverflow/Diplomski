@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_miJQYAiZEeqcVO6UFbEYXg" name="leaderelection1">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_mjetIAiZEeqcVO6UFbEYXg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_miSaUAiZEeqcVO6UFbEYXg" name="Activity1" node="_Z0yvkAk_EeqWXoXbYwrRSg _bBi2kAk_EeqWXoXbYwrRSg _c9BEwAk_EeqWXoXbYwrRSg _pvnNgAk_EeqWXoXbYwrRSg _17mCMAk_EeqWXoXbYwrRSg _35sGkAk_EeqWXoXbYwrRSg _48K3QAk_EeqWXoXbYwrRSg _ydfHIAlAEeqWXoXbYwrRSg _I-acwAlJEeqWXoXbYwrRSg _S-WQoAlJEeqWXoXbYwrRSg">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_PMPAAAlAEeqWXoXbYwrRSg" annotatedElement="_I-acwAlJEeqWXoXbYwrRSg">
+      <body>Ukoliko lider otkaže,&#xD;
+watch event je postavljen na true,&#xD;
+klijenti ponovo izvršavaju algoritam&#xD;
+</body>
+    </ownedComment>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Z76OwAlAEeqWXoXbYwrRSg" target="_bBi2kAk_EeqWXoXbYwrRSg" source="_Z0yvkAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_emB0gAlAEeqWXoXbYwrRSg" target="_17mCMAk_EeqWXoXbYwrRSg" source="_pvnNgAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fiSBYAlAEeqWXoXbYwrRSg" name="TRUE" target="_35sGkAk_EeqWXoXbYwrRSg" source="_17mCMAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_z44uIAlAEeqWXoXbYwrRSg" target="_ydfHIAlAEeqWXoXbYwrRSg" source="_35sGkAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pbo9EAlJEeqWXoXbYwrRSg" target="_c9BEwAk_EeqWXoXbYwrRSg" source="_bBi2kAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_qwa-sAlJEeqWXoXbYwrRSg" target="_S-WQoAlJEeqWXoXbYwrRSg" source="_c9BEwAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_r27TwAlJEeqWXoXbYwrRSg" target="_pvnNgAk_EeqWXoXbYwrRSg" source="_S-WQoAlJEeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_s-uCQAlJEeqWXoXbYwrRSg" name="FALSE" target="_48K3QAk_EeqWXoXbYwrRSg" source="_17mCMAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_t0hB0AlJEeqWXoXbYwrRSg" target="_I-acwAlJEeqWXoXbYwrRSg" source="_48K3QAk_EeqWXoXbYwrRSg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_uvdAEAlJEeqWXoXbYwrRSg" target="_ydfHIAlAEeqWXoXbYwrRSg" source="_I-acwAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_Z0yvkAk_EeqWXoXbYwrRSg" name="START" outgoing="_Z76OwAlAEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bBi2kAk_EeqWXoXbYwrRSg" name="create(&quot;/election&quot;,PERSISTENT)" incoming="_Z76OwAlAEeqWXoXbYwrRSg" outgoing="_pbo9EAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_c9BEwAk_EeqWXoXbYwrRSg" name="create(&quot;/election/leader-&quot;,myData,SEQUENTIALEPHEMERAL)" incoming="_pbo9EAlJEeqWXoXbYwrRSg" outgoing="_qwa-sAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_pvnNgAk_EeqWXoXbYwrRSg" name="leaderData=getData(&quot;/election/&quot;+L.Min())" incoming="_r27TwAlJEeqWXoXbYwrRSg" outgoing="_emB0gAlAEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_17mCMAk_EeqWXoXbYwrRSg" name="if(myData==leaderData)" incoming="_emB0gAlAEeqWXoXbYwrRSg" outgoing="_fiSBYAlAEeqWXoXbYwrRSg _s-uCQAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_35sGkAk_EeqWXoXbYwrRSg" name="Klijent je lider" incoming="_fiSBYAlAEeqWXoXbYwrRSg" outgoing="_z44uIAlAEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_48K3QAk_EeqWXoXbYwrRSg" name="Klijent nije lider, ažurira ko je novi lider" incoming="_s-uCQAlJEeqWXoXbYwrRSg" outgoing="_t0hB0AlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_ydfHIAlAEeqWXoXbYwrRSg" name="END" incoming="_z44uIAlAEeqWXoXbYwrRSg _uvdAEAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_I-acwAlJEeqWXoXbYwrRSg" name="Klijent poziva exists() sa watch flagom na leader znode sa sledećom nižom sekvencom brojeva" incoming="_t0hB0AlJEeqWXoXbYwrRSg" outgoing="_uvdAEAlJEeqWXoXbYwrRSg"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_S-WQoAlJEeqWXoXbYwrRSg" name="L=getChildren(&quot;/election&quot;,false)" incoming="_qwa-sAlJEeqWXoXbYwrRSg" outgoing="_r27TwAlJEeqWXoXbYwrRSg"/>
+  </packagedElement>
+</uml:Model>
